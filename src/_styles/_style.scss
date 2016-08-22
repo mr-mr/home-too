@@ -1,0 +1,26 @@
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #fff;
+$image-borders: 1px solid red;
+$radius: 50%;
+$font-size-large: 1.2em;
+
+
+body {
+  background-color: $primary-color;
+  margin: 0;
+  font-family: $font-stack;
+  font-size: $font-size-large;
+}
+
+.home {
+  &--wrapper {
+    width:100%;
+    height:100%;
+    background-color: aqua;
+  }
+  &--links {
+    li {
+      list-style-type: none;
+    }
+  }
+}
