@@ -47,6 +47,7 @@ module.exports = function(grunt) {
             dist: {
                 files:{
                     'js/content.min.js': 'src/_scripts/content.js',
+                    'js/handlebars-v4.0.5.min.js': 'src/_scripts/handlebars-v4.0.5.js',
                 }
             }
         },
@@ -59,7 +60,7 @@ module.exports = function(grunt) {
         },
         src: '../home-too',
         dest: '/hometoo',
-        exclusions: ['.DS_Store', 'tmp', '.ftppass', '.git']
+        exclusions: ['.DS_Store', 'tmp', '.ftppass', 'node_modules', '.git']
       }
     }
   });

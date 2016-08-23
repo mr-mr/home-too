@@ -9,18 +9,45 @@
 </head>
 <body>
   <div class="home--wrapper">
-    <div class="home--intro"></div>
-    <div class="home--experimenting"></div>
-    <div class="home--writing"></div>
-    <div class="home--speaking"></div>
-    <ul class="home--links">
-        <li class="home--links-twitter"><i class="fa fa-twitter-square" aria-hidden="true"></i></li>
-        <li class="home--links-instagram"></li>
-        <li class="home--links-cv"></li>
-        <li class="home--links-linkedin"></li>
-        <li class="home--links-medium"></li>
-    </ul>
+    <div id="content">
+    <script id="main_content" type="text/x-handlebars-template">
+      <div class="home--content">
+        <div class="home--intro">
+          {{#each feed.entry}}
+            <h1>{{title.$t}}</h1>
+          <p>{{content.$t}}</p>
+          {{/each}}
+        </div>
+        <div class="home--experimenting">
+          <h2>Tester title 2</h2>
+          <ul>
+            <li>Link</li>
+          </ul>
+        </div>
+        <div class="home--writing">
+          <h2>Tester title 3</h2>
+          <ul>
+            <li>Link</li>
+          </ul>
+        </div>
+        <div class="home--speaking">
+          <h2>Tester title 4</h2>
+          <ul>
+            <li>Link</li>
+          </ul>
+        </div>
+        <ul class="home--links">
+            <li class="home--links-twitter"><a href="{{URL}}"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+            <li class="home--links-instagram"><i class="fa fa-instagram" aria-hidden="true"></i></li>
+            <li class="home--links-cv"><i class="fa fa-folder-o" aria-hidden="true"></i></li>
+            <li class="home--links-linkedin"><i class="fa fa-linkedin-square" aria-hidden="true"></i></li>
+            <li class="home--links-medium"><i class="fa fa-medium" aria-hidden="true"></i></li>
+        </ul>
+      </div>
+    </script>
   </div>
+  </div>
+  <script src="js/handlebars-v4.0.5.min.js"></script>
   <script src="js/content.min.js"></script>
 </body>
 </html>
