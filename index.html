@@ -10,44 +10,84 @@
 <body>
   <div class="home--wrapper">
     <div id="content">
-    <script id="main_content" type="text/x-handlebars-template">
+      <ul class="home--links">
+          <li class="home--links-twitter"><a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+          <li class="home--links-instagram"><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+          <li class="home--links-cv" title="Chris Clarke's portfolio PDF"><a href="#"><i class="fa fa-folder-o" aria-hidden="true"></i></a></li>
+          <li class="home--links-linkedin"><a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+          <li class="home--links-medium"><a href="#"><i class="fa fa-medium" aria-hidden="true"></i></a></li>
+      </ul>
+      <div class="home--content home--intro">
+        <h2>Hi there.</h2>
+        <p>I'm Chris Clarke, a product designer currently working at the Guardian. I led UX on the launch of theguardian.com and I'm now working on the mobile apps team, across iOS and Android apps. I designed the first mobile experience for Yahoo! Answers and I taught evening UX and Design courses at General Assembly London.</p>
+      </div>
       <div class="home--content">
-        <div class="home--intro">
-          {{#each feed.entry}}
-            <h1>{{title.$t}}</h1>
-          <p>{{content.$t}}</p>
-          {{/each}}
-        </div>
-        <div class="home--experimenting">
-          <h2>Tester title 2</h2>
-          <ul>
-            <li>Link</li>
-          </ul>
-        </div>
-        <div class="home--writing">
-          <h2>Tester title 3</h2>
-          <ul>
-            <li>Link</li>
-          </ul>
-        </div>
-        <div class="home--speaking">
-          <h2>Tester title 4</h2>
-          <ul>
-            <li>Link</li>
-          </ul>
-        </div>
-        <ul class="home--links">
-            <li class="home--links-twitter"><a href="{{URL}}"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
-            <li class="home--links-instagram"><i class="fa fa-instagram" aria-hidden="true"></i></li>
-            <li class="home--links-cv"><i class="fa fa-folder-o" aria-hidden="true"></i></li>
-            <li class="home--links-linkedin"><i class="fa fa-linkedin-square" aria-hidden="true"></i></li>
-            <li class="home--links-medium"><i class="fa fa-medium" aria-hidden="true"></i></li>
+        <ul>
+          <p>Projects</p>
+          <a href="https://www.theguardian.com/world/ng-interactive/2016/sep/16/gun-nation-a-journey-to-the-heart-of-americas-gun-culture-video"><li class="work-1"></li></a>
+          <a href="http://mr-mr.co.uk/lazytraveller/"><li class="work-2"></li></a>
+          <a href="https://www.theguardian.com/uk"><li class="work-3"></li></a>
+          <a href="https://uk.answers.yahoo.com/"><li class="work-4"></li></a>
+          <a href=""><li class="work-5"></li></a>
+          <a href="https://speakerdeck.com/mrmr1/all-the-news-that-fits-1"><li class="work-6"></li></a>
+          <a href="https://www.theguardian.com/football/2016/oct/25/arsenal-reading-efl-cup-match-report"><li class="work-7"></li></a>
+          <a href="http://mr-mr.co.uk/guardianNGW/"><li class="work-8"></li></a>
         </ul>
       </div>
-    </script>
-  </div>
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+      	 width="34.167px" height="34.917px" viewBox="0 0 34.167 34.917" enable-background="new 0 0 34.167 34.917" xml:space="preserve">
+      <path fill="#3C3C3B" stroke="#000000" stroke-width="2" stroke-miterlimit="10" d="M32.984,28.536L18.133,3.47
+      	C17.96,3.178,17.647,3,17.309,3c-0.338,0-0.652,0.179-0.824,0.47L1.634,28.536c-0.134,0.226-0.169,0.497-0.098,0.749
+      	c0.071,0.252,0.243,0.465,0.475,0.587l20.851,3.939c0.14,0.074,0.293,0.11,0.447,0.11c0.153,0,0.307-0.037,0.446-0.11l8.852-3.939
+      	c0.231-0.122,0.403-0.334,0.475-0.587C33.153,29.032,33.118,28.762,32.984,28.536z"/>
+      <polyline fill="#FFFFFF" stroke="#000000" stroke-width="2" stroke-miterlimit="10" points="22.665,11.119 17.309,2 11.872,11.255
+      	"/>
+      <polygon fill="#FFFFFF" points="15.365,10.417 17.29,12.713 18.374,10.417 "/>
+      <polygon fill="#3C3C3B" points="18.583,11.75 19.583,10.417 21.708,11.917 "/>
+      <polyline fill="none" stroke="#000000" stroke-miterlimit="10" points="11.913,12.052 14.54,10.63 17.29,12.713 19.457,9.797
+      	22.705,11.915 "/>
+      </svg>
+
+    </div>
   </div>
   <script src="js/handlebars-v4.0.5.min.js"></script>
   <script src="js/content.min.js"></script>
 </body>
 </html>
+
+<!-- <script id="main_content" type="text/x-handlebars-template">
+  <div class="home--content">
+    <div class="home--intro">
+      {{#each feed.entry}}
+        <h1>{{title.$t}}</h1>
+        <ul>
+          <li>{{content.$t}}</li>
+        </ul>
+      {{/each}}
+    </div>
+    <div class="home--experimenting">
+      {{#each feed.entry}}
+        <h1>{{title.$t}}</h1>
+        <ul>
+          <li>{{content.$t}}</li>
+        </ul>
+      {{/each}}
+    </div>
+    <div class="home--writing">
+      {{#each feed.entry}}
+        <h1>{{title.$t}}</h1>
+        <ul>
+          <li>{{content.$t}}</li>
+        </ul>
+      {{/each}}
+    </div>
+    <div class="home--speaking">
+      {{#each feed.entry}}
+        <h1>{{title.$t}}</h1>
+        <ul>
+          <li>{{content.$t}}</li>
+        </ul>
+      {{/each}}
+    </div>
+  </div>
+</script> -->
