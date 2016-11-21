@@ -50,6 +50,15 @@ img {
     margin-top: 10px;
 }
 
+.border-work {
+  padding-top: 10px;
+  margin: 20px;
+  div {
+    border-top: 1px solid $grey-light;
+    width: 20px;
+  }
+}
+
 @mixin work-image-border {
   border: 1px solid $grey-light;
 }

@@ -83,6 +83,12 @@ footer {
   border-bottom: 2px solid $grey-dark;
 }
 
+.about {
+  @include mq(desktop){
+    width: 50%;
+  }
+}
+
 .home {
   &--header {
     margin: 20px;
