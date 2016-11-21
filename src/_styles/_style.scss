@@ -1,7 +1,8 @@
 $font-stack:    Helvetica, sans-serif;
-$primary-color: #676767;
-$secondary-color: #fff;
+$primary-color: #fafafa;
+$secondary-color: #333;
 $grey-light: #dadada;
+$grey-med: #979797;
 $grey-dark: #333;
 $image-borders: 1px solid red;
 $radius: 50%;
@@ -11,6 +12,9 @@ $font-size-large: 1.3em;
 $font-size-links: 1em;
 $font-lineheight: 1.7em;
 
+* {
+  box-sizing: border-box;
+}
 
 body, h1, h2, p, li, div {
   padding: 0;
@@ -20,6 +24,7 @@ body, h1, h2, p, li, div {
 a:link,
 a:visited {
   color: $secondary-color;
+  text-decoration: none;
 }
 
 a:hover {
@@ -38,31 +43,92 @@ h1 {
 }
 
 h2 {
-  font-size: $font-size-medium;
+  font-size: $font-size-small;
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
+  font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 p, li {
   font-size: $font-size-small;
   line-height: $font-size-large;
+  font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 p {
   margin-bottom: 20px;
 }
 
+header {
+  width: 100%;
+  border-bottom: 1px solid $grey-med;
+  @include mq(desktop){
+    border: none;
+  }
+  a:hover {
+    border-bottom: 2px solid $grey-dark;
+  }
+}
+
+footer {
+  width: 100%;
+  height: 100%;
+  border-top: 1px solid $grey-med;
+  @include mq(desktop){
+    border: none;
+  }
+}
+
+.active {
+  border-bottom: 2px solid $grey-dark;
+}
+
 .home {
+  &--header {
+    margin: 20px;
+    padding: 0;
+    @include mq($from:wide) {
+      margin: 20px auto;
+      width: 1240px;
+    }
+    li {
+      font-size: $font-size-small;
+      display: inline-block;
+      list-style-type: none;
+      margin-right: .9em;
+    }
+  }
+  &--footer {
+    margin: 20px;
+    padding: 0;
+    @include mq($from:wide) {
+      margin: 20px auto;
+      width: 1240px;
+    }
+    li {
+      font-size: $font-size-links;
+      display: inline-block;
+      list-style-type: none;
+      margin-right: .5em;
+    }
+  }
   &--wrapper {
     width: 100%;
     height: 100%;
+    margin: 0 auto 0;
     svg {
       position: fixed;
       right: 10px;
       bottom: 10px;
     }
+    @include mq($from:wide) {
+      width: 1280px;
+    }
   }
   &--intro {
+    font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 24px;
+    font-weight: 300;
     @include mq($from:tablet) {
       width: 50%;
     }
@@ -70,26 +136,52 @@ p {
   &--content {
     margin: 20px;
 
-    li {
+    div {
       position: relative;
       display: inline-block;
       word-wrap: break-word;
-      width: 32%;
+      width: 100%;
       height: 250px;
-      margin: 2px;
+      margin-bottom: 100px;
       overflow: visible;
+      @include mq(mobileLandscape) {
+        width: 48%;
+      }
+      @include mq($from:tablet) {
+        width: 31%;
+        margin-right: 10px;
+      }
     }
-    li:hover {
-      box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-      border: 1px solid red;
+    div:hover {
+      opacity: 0.8;
+    }
+  }
+  &--work {
+    margin: 20px;
+
+    div {
+      position: relative;
+      display: inline-block;
+      vertical-align: top;
+      word-wrap: break-word;
+      width: 100%;
+      height: 667px;
+      margin-bottom: 140px;
+      overflow: visible;
+      @include mq(mobileLandscape) {
+        width: 48%;
+      }
+      @include mq($from:desktop) {
+        width: 31%;
+        margin-right: 10px;
+      }
+    }
+    div:hover {
+      opacity: 0.8;
     }
   }
   &--links {
-    margin: 20px;
     padding: 0;
-    width:50%;
     li {
       font-size: $font-size-links;
       display: inline-block;
