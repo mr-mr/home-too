@@ -62,7 +62,8 @@ module.exports = function(grunt) {
         dest: '/hometoo',
         exclusions: ['.DS_Store', 'tmp', '.ftppass', 'node_modules', '.git']
       }
-    }
+    },
+    
   });
 
   grunt.loadNpmTasks('grunt-notify');
@@ -74,6 +75,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-ftp-deploy');
+  grunt.loadNpmTasks('grunt-imagemagick');
 
 
   grunt.registerTask('default',['sass', 'connect', 'watch', 'cssmin', 'uglify']);

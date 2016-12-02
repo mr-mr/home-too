@@ -14,6 +14,7 @@ $font-lineheight: 1.7em;
 
 * {
   box-sizing: border-box;
+  flex-wrap: wrap;
 }
 
 body, h1, h2, p, li, div {
@@ -49,7 +50,7 @@ h2 {
   font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-p, li {
+p {
   font-size: $font-size-small;
   line-height: $font-size-large;
   font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -135,30 +136,33 @@ footer {
     font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 24px;
     font-weight: 300;
-    @include mq($from:tablet) {
+    text-align: center;
+    @include mq($from:desktop) {
       width: 50%;
+      text-align: left;
     }
   }
   &--content {
     margin: 20px;
 
-    div {
+    li {
       position: relative;
-      display: inline-block;
+      display: inline-flex;
+      flex-wrap: wrap;
+      align-content: flex-start;
       word-wrap: break-word;
       width: 100%;
-      height: 250px;
-      margin-bottom: 100px;
-      overflow: visible;
+      height: 330px;
+      margin-bottom: 20px;
       @include mq(mobileLandscape) {
         width: 48%;
+        margin-right: 5px;
       }
-      @include mq($from:tablet) {
+      @include mq($from:desktop) {
         width: 31%;
-        margin-right: 10px;
       }
     }
-    div:hover {
+    li:hover {
       opacity: 0.8;
     }
   }
