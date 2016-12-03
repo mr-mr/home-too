@@ -31,9 +31,9 @@ img {
   border-radius: 50%;
   overflow: hidden;
   background-color: #fff;
-  @include mq(desktop){
-    margin: 20px;
-  }
+  // @include mq(desktop){
+  //   margin: 20px;
+  // }
 }
 .logo_2017 {
   width: 218px;

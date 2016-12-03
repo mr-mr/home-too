@@ -130,10 +130,14 @@ footer {
 .home--footer {
   margin: 20px;
   padding: 0; }
+  @media (min-width: 61.25em) {
+    .home--footer {
+      position: absolute;
+      top: 0;
+      right: 0; } }
   @media (min-width: 81.25em) {
     .home--footer {
-      margin: 20px auto;
-      width: 1240px; } }
+      width: 220px; } }
   .home--footer li {
     font-size: 1em;
     display: inline-block;
@@ -160,7 +164,7 @@ footer {
   @media (min-width: 61.25em) {
     .home--intro {
       width: 50%;
-      text-align: left; } }
+      margin: auto; } }
 
 .home--content {
   margin: 20px; }
@@ -179,7 +183,8 @@ footer {
         margin-right: 5px; } }
     @media (min-width: 61.25em) {
       .home--content li {
-        width: 31%; } }
+        width: 32%;
+        margin-right: 8px; } }
   .home--content li:hover {
     opacity: 0.8; }
 
@@ -242,9 +247,6 @@ img {
   border-radius: 50%;
   overflow: hidden;
   background-color: #fff; }
-  @media (min-width: 61.25em) {
-    .logo_container {
-      margin: 20px; } }
 
 .logo_2017 {
   width: 218px;
