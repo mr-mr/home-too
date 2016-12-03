@@ -112,7 +112,8 @@ footer {
 
 @media (min-width: 61.25em) {
   .about {
-    width: 50%; } }
+    width: 50%;
+    margin: 10px auto; } }
 
 .home--header {
   margin: 20px;

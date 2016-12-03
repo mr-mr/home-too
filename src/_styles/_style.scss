@@ -87,6 +87,7 @@ footer {
 .about {
   @include mq(desktop){
     width: 50%;
+    margin: 10px auto;
   }
 }
 
