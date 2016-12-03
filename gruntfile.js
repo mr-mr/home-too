@@ -51,6 +51,22 @@ module.exports = function(grunt) {
                 }
             }
         },
+    responsive_images: {
+      resize: {
+          options: {
+              sizes: [{
+                  width: 700,
+                  quality: 100
+              }]
+          },
+          files: [{
+              expand: true,
+              cwd: 'img/src/',
+              src: ['**/*.{jpg,gif,png}'],
+              custom_dest: 'img/build/{%= height %}/'
+          }]
+        }
+      },
     'ftp-deploy' : {
       build: {
         auth: {
@@ -62,8 +78,7 @@ module.exports = function(grunt) {
         dest: '/hometoo',
         exclusions: ['.DS_Store', 'tmp', '.ftppass', 'node_modules', '.git']
       }
-    },
-    
+    }
   });
 
   grunt.loadNpmTasks('grunt-notify');
@@ -75,8 +90,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-ftp-deploy');
-  grunt.loadNpmTasks('grunt-imagemagick');
+  grunt.loadNpmTasks('grunt-responsive-images');
 
 
-  grunt.registerTask('default',['sass', 'connect', 'watch', 'cssmin', 'uglify']);
+  grunt.registerTask('default',['sass', 'responsive_images', 'connect', 'watch', 'cssmin', 'uglify']);
 }

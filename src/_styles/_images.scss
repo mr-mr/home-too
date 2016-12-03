@@ -90,35 +90,35 @@ img {
 
 .work-1 {
   &:after {
-    background-image: url('../img/work_guardian_docs.png');
+    background-image: url('../img/build/work_guardian_docs.png');
   }
 }
 .work-2 {
   &:after {
-    background-image: url('../img/work_commute_app.png');
+    background-image: url('../img/build/work_commute_app.png');
   }
 }
 .work-3 {
   &:after {
-    background-image: url('../img/work_theguardian.png');
+    background-image: url('../img/build/work_theguardian.png');
     @include work-image-border;
   }
 }
 .work-4 {
   &:after {
-    background-image: url('../img/work_yahoo.png');
+    background-image: url('../img/build/work_yahoo.png');
   }
 }
 .work-5 {
   &:after {
-    background-image: url('../img/work_wm_landing_screen.png');
+    background-image: url('../img/build/work_wm_landing_screen.png');
   }
 }
 
 .work-5-extra-1 {
   &:after {
     content: '';
-    background-image: url('../img/work_wm_landing_screen.png');
+    background-image: url('../img/build/work_wm_landing_screen.png');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: auto;
@@ -135,7 +135,7 @@ img {
 .work-5-extra-2 {
   &:after {
     content: '';
-    background-image: url('../img/work_wm_screens_2.png');
+    background-image: url('../img/build/work_wm_screens_2.png');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: auto;
@@ -151,7 +151,7 @@ img {
 .work-5-extra-3 {
   &:after {
     content: '';
-    background-image: url('../img/work_wm_screens_3.png');
+    background-image: url('../img/build/work_wm_screens_3.png');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: auto;
@@ -166,18 +166,18 @@ img {
 
 .work-6 {
   &:after {
-    background-image: url('../img/work_density.png');
+    background-image: url('../img/build/work_density.png');
   }
 }
 .work-7 {
   &:after {
-    background-image: url('../img/work_guardian_football.png');
+    background-image: url('../img/build/work_guardian_football.png');
     @include work-image-border;
   }
 }
 .work-8 {
   &:after {
-    background-image: url('../img/work_guardian_wireframes.png');
+    background-image: url('../img/build/work_guardian_wireframes.png');
     @include work-image-border;
   }
 }
