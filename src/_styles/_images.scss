@@ -1,14 +1,16 @@
 img {
-  position:relative;
-  width: 100vw;
-  left: calc(-50vw + 50%);
-  right: calc(-50vw + 50%);
-  margin-right: -20px;
-  @include mq(desktop){
-    margin-right: -100%;
-    top: calc(-50vw + 50%);
-    vertical-align: middle
-  }
+  width: 100%;
+  height: auto;
+  // position:relative;
+  // width: 100vw;
+  // left: calc(-50vw + 50%);
+  // right: calc(-50vw + 50%);
+  // margin-right: -20px;
+  // @include mq(desktop){
+  //   margin-right: -100%;
+  //   top: calc(-50vw + 50%);
+  //   vertical-align: middle
+  // }
 }
 
 .about-img-holder {
@@ -45,7 +47,6 @@ img {
 
 .border {
     border-top: 1px solid $grey-light;
-    width: 20px;
     padding-top: 10px;
     margin-top: 10px;
 }
@@ -72,19 +73,33 @@ img {
 .work-7,
 .work-8 {
   &:after {
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
+    content: '';
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    width: 100%;
+    height: 230px;
+    cursor: pointer;
+  }
+}
+
+.work-2-extra-1,
+.work-2-extra-2,
+.work-2-extra-3,
+.work-2-extra-4,
+.work-2-extra-5,
+.work-5-extra-1,
+.work-5-extra-2,
+.work-5-extra-3 {
+  &:after {
     content: '';
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    display: inline-flex;
-    flex-wrap: wrap;
+    display: flex;
     width: 100%;
-    height: 230px;
-    overflow: hidden;
-    align-content: flex-end;
+    height: 400px;
+    cursor: pointer;
   }
 }
 
@@ -98,6 +113,38 @@ img {
     background-image: url('../img/build/work_commute_app.png');
   }
 }
+
+.work-2-extra-1 {
+  &:after {
+    background-image: url('../img/build/work_cmt_app_1.jpg');
+  }
+}
+
+.work-2-extra-2 {
+  &:after {
+    background-image: url('../img/build/work_cmt_app_2.jpg');
+  }
+}
+
+.work-2-extra-3 {
+  &:after {
+    background-image: url('../img/build/work_cmt_app_3.jpg');
+  }
+}
+
+.work-2-extra-4 {
+  &:after {
+    background-image: url('../img/build/work_cmt_app_4.jpg');
+  }
+}
+
+.work-2-extra-5 {
+  &:after {
+    background-image: url('../img/build/work_cmt_app_5.jpg');
+  }
+}
+
+
 .work-3 {
   &:after {
     background-image: url('../img/build/work_theguardian.png');
@@ -117,50 +164,19 @@ img {
 
 .work-5-extra-1 {
   &:after {
-    content: '';
     background-image: url('../img/build/work_wm_landing_screen.png');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: auto;
-    display: block;
-    width: 100%;
-    height: 100%;
-    background-color: #4e4e4e;
-    position: absolute;
-    top: 130px;
-    padding: 0;
   }
 }
 
 .work-5-extra-2 {
   &:after {
-    content: '';
     background-image: url('../img/build/work_wm_screens_2.png');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: auto;
-    display: block;
-    width: 100%;
-    height: 100%;
-    background-color: #4e4e4e;
-    position: absolute;
-    top: 130px;
   }
 }
 
 .work-5-extra-3 {
   &:after {
-    content: '';
     background-image: url('../img/build/work_wm_screens_3.png');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: auto;
-    display: block;
-    width: 100%;
-    height: 100%;
-    background-color: #4e4e4e;
-    position: absolute;
-    top: 130px;
   }
 }
 

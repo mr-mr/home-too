@@ -1,6 +1,7 @@
 $font-stack:    Helvetica, sans-serif;
 $primary-color: #fafafa;
 $secondary-color: #333;
+$grey-lighter: #f4f4f4;
 $grey-light: #dadada;
 $grey-med: #979797;
 $grey-dark: #333;
@@ -85,9 +86,46 @@ footer {
 }
 
 .about {
+  display: block;
   @include mq(desktop){
     width: 50%;
     margin: 10px auto;
+  }
+}
+
+.grid {
+  margin: 0 auto 0;
+  width: 100%;
+  display: flex;
+  height: calc(100vh - 50px);
+  align-items: stretch;
+}
+
+.grid-list {
+  padding: 10px 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.grid-item {
+  display: flex;
+  flex: 1 0 50%;
+  max-width: 350px;
+  margin: 10px;
+  border-top: 1px solid $grey-light;
+  padding: 10px;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include mq(mobileLandscape){
+    flex: 1 0 40%;
+  }
+  @include mq(desktop) {
+    flex: 1 0 30%;
+  }
+  @include mq(wide) {
+    flex: 1 0 20%;
   }
 }
 
@@ -143,59 +181,15 @@ footer {
     font-weight: 300;
     text-align: center;
     @include mq($from:desktop) {
-      width: 50%;
+      width: 40%;
       margin: auto;
     }
   }
   &--content {
     margin: 20px;
-
-    li {
-      position: relative;
-      display: inline-flex;
-      flex-wrap: wrap;
-      align-content: flex-start;
-      word-wrap: break-word;
-      width: 100%;
-      height: 330px;
-      margin-bottom: 20px;
-      @include mq(mobileLandscape) {
-        width: 48%;
-        margin-right: 5px;
-      }
-      @include mq($from:desktop) {
-        width: 32%;
-        margin-right: 8px;
-      }
-    }
-    li:hover {
-      opacity: 0.8;
-    }
+    display: flex;
   }
-  &--work {
-    margin: 20px;
 
-    div {
-      position: relative;
-      display: inline-block;
-      vertical-align: top;
-      word-wrap: break-word;
-      width: 100%;
-      height: 667px;
-      margin-bottom: 140px;
-      overflow: visible;
-      @include mq(mobileLandscape) {
-        width: 48%;
-      }
-      @include mq($from:desktop) {
-        width: 31%;
-        margin-right: 10px;
-      }
-    }
-    div:hover {
-      opacity: 0.8;
-    }
-  }
   &--links {
     padding: 0;
     li {
