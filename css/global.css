@@ -106,15 +106,11 @@ footer {
     footer {
       border: none; } }
 
+#content {
+  display: inline-flex; }
+
 .active {
   border-bottom: 2px solid #333; }
-
-.about {
-  display: block; }
-  @media (min-width: 61.25em) {
-    .about {
-      width: 50%;
-      margin: 10px auto; } }
 
 .grid {
   margin: 0 auto 0;
@@ -122,6 +118,9 @@ footer {
   display: flex;
   height: calc(100vh - 50px);
   align-items: stretch; }
+  @media (min-width: 61.25em) {
+    .grid {
+      width: 80%; } }
 
 .grid-list {
   width: 100%;
@@ -144,7 +143,7 @@ footer {
   @media (min-width: 61.25em) {
     .grid-item {
       flex: 1 0 30%;
-      border-top: 1px solid #dadada; } }
+      border-top: 1px solid #f4f4f4; } }
   @media (min-width: 81.25em) {
     .grid-item {
       flex: 1 0 20%; } }
@@ -168,6 +167,7 @@ footer {
   display: none; }
   @media (min-width: 61.25em) {
     .home--footer {
+      display: block;
       position: absolute;
       top: 0;
       right: 0; } }
@@ -196,15 +196,16 @@ footer {
   font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 24px;
   font-weight: 300;
-  text-align: center; }
+  text-align: center;
+  padding-bottom: 20px; }
   @media (min-width: 61.25em) {
     .home--intro {
-      width: 40%;
-      margin: auto; } }
+      margin: auto;
+      text-align: left;
+      font-size: 18px; } }
 
 .home--content {
-  margin: 20px;
-  display: flex; }
+  margin: 20px; }
 
 .home--links {
   padding: 0; }
@@ -213,6 +214,15 @@ footer {
     display: inline-block;
     list-style-type: none;
     padding-right: .5em; }
+
+.intro--container {
+  padding-bottom: 25px; }
+  @media (min-width: 61.25em) {
+    .intro--container {
+      width: 20%; } }
+
+.about {
+  text-align: left; }
 
 img {
   width: 100%;
@@ -231,11 +241,15 @@ img {
 
 .logo_container {
   margin: 20px auto;
-  width: 200px;
-  height: 200px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
+  border: 1px solid #dedede;
   overflow: hidden;
   background-color: #fff; }
+  @media (min-width: 61.25em) {
+    .logo_container {
+      margin: 10px; } }
 
 .logo_2017 {
   width: 218px;

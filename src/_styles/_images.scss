@@ -28,14 +28,16 @@ img {
 
 .logo_container {
   margin: 20px auto;
-  width: 200px;
-  height: 200px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
+  border: 1px solid #dedede;
   overflow: hidden;
   background-color: #fff;
-  // @include mq(desktop){
-  //   margin: 20px;
-  // }
+
+  @include mq(desktop) {
+    margin: 10px;
+  }
 }
 .logo_2017 {
   width: 218px;

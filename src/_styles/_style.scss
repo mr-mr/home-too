@@ -81,16 +81,12 @@ footer {
   }
 }
 
-.active {
-  border-bottom: 2px solid $grey-dark;
+#content {
+  display: inline-flex;
 }
 
-.about {
-  display: block;
-  @include mq(desktop){
-    width: 50%;
-    margin: 10px auto;
-  }
+.active {
+  border-bottom: 2px solid $grey-dark;
 }
 
 .grid {
@@ -99,6 +95,10 @@ footer {
   display: flex;
   height: calc(100vh - 50px);
   align-items: stretch;
+
+  @include mq($from:desktop) {
+    width: 80%;
+  }
 }
 
 .grid-list {
@@ -123,7 +123,7 @@ footer {
   }
   @include mq(desktop) {
     flex: 1 0 30%;
-    border-top: 1px solid $grey-light;
+    border-top: 1px solid $grey-lighter;
   }
   @include mq(wide) {
     flex: 1 0 20%;
@@ -150,6 +150,7 @@ footer {
     padding: 0;
     display: none;
     @include mq(desktop) {
+      display: block;
       position: absolute;
       top: 0;
       right: 0;
@@ -182,14 +183,15 @@ footer {
     font-size: 24px;
     font-weight: 300;
     text-align: center;
+    padding-bottom: 20px;
     @include mq($from:desktop) {
-      width: 40%;
       margin: auto;
+      text-align: left;
+      font-size: 18px;
     }
   }
   &--content {
     margin: 20px;
-    display: flex;
   }
 
   &--links {
@@ -201,4 +203,15 @@ footer {
       padding-right: .5em;
     }
   }
+}
+
+.intro--container {
+  padding-bottom: 25px;
+  @include mq(desktop){
+      width: 20%;
+  }
+}
+
+.about {
+  text-align: left;
 }
